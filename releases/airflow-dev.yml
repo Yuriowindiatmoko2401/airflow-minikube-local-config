@@ -14,8 +14,8 @@ spec:
   values:
     images:
       airflow:
-        repository: "asia.gcr.io/warung-support/data_dockerlab"
-        tag: "latest"
+        repository: "yuriowindiatmoko2401/data_dockerlab"
+        tag: "0.0.1"
     fernetKey: "zTxhk7FuGqQVPZVoukLn5bGWOrgHzhQnBnaqAItcZGI="
     env:
       - name: "AIRFLOW__KUBERNETES__DAGS_IN_IMAGE"
@@ -23,9 +23,9 @@ spec:
       - name: "AIRFLOW__KUBERNETES__NAMESPACE"
         value: "dev"
       - name: "AIRFLOW__KUBERNETES__WORKER_CONTAINER_REPOSITORY"
-        value: "asia.gcr.io/warung-support/data_dockerlab"
+        value: "yuriowindiatmoko2401/data_dockerlab"
       - name: "AIRFLOW__KUBERNETES__WORKER_CONTAINER_TAG"
-        value: "latest"
+        value: "0.0.1"
       - name: "AIRFLOW__KUBERNETES__RUN_AS_USER"
         value: "50000"
       - name: "AIRFLOW__CORE__LOAD_EXAMPLES"
