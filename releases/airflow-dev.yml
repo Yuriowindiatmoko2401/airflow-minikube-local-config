@@ -3,8 +3,6 @@ kind: HelmRelease
 metadata:
   name: airflow
   namespace: dev
-  annotations:
-    flux.weave.works/automated: "true"
 spec:
   releaseName: airflow-dev
   chart:
