@@ -12,31 +12,33 @@ spec:
     name: airflow
     version: 1.0.0
   values:
+    images.airflow.repository: "asia.gcr.io/warung-support/data_dockerlab"
+    images.airflow.tag: "latest"
     fernetKey: "zTxhk7FuGqQVPZVoukLn5bGWOrgHzhQnBnaqAItcZGI="
     env:
       - name: "AIRFLOW__KUBERNETES__DAGS_IN_IMAGE"
-        value: "False"
+        value: "True"
       - name: "AIRFLOW__KUBERNETES__NAMESPACE"
         value: "dev"
       - name: "AIRFLOW__KUBERNETES__WORKER_CONTAINER_REPOSITORY"
-        value: "apache/airflow"
+        value: "asia.gcr.io/warung-support/data_dockerlab"
       - name: "AIRFLOW__KUBERNETES__WORKER_CONTAINER_TAG"
-        value: "1.10.10.1-alpha2-python3.7"
+        value: "latest"
       - name: "AIRFLOW__KUBERNETES__RUN_AS_USER"
         value: "50000"
       - name: "AIRFLOW__CORE__LOAD_EXAMPLES"
         value: "False"
     executor: "KubernetesExecutor"
-    dags:
-      persistence:
-        enabled: false
-      gitSync:
-        enabled: true
-        repo: git@github.com:Yuriowindiatmoko2401/airflow-dags.git
-        branch: master
-        maxFailures: 0
-        subPath: ""
-        sshKeySecret: airflow-ssh-secret
-        wait: 60
+    # dags:
+    #   persistence:
+    #     enabled: false
+    #   gitSync:
+    #     enabled: true
+    #     repo: git@github.com:Yuriowindiatmoko2401/airflow-dags.git
+    #     branch: master
+    #     maxFailures: 0
+    #     subPath: ""
+    #     sshKeySecret: airflow-ssh-secret
+    #     wait: 60
 
     
