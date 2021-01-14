@@ -32,10 +32,11 @@ spec:
         enabled: false
       gitSync:
         enabled: true
-        repo: git@github.com:Yuriowindiatmoko2401/airflow-dags.git
+        repo: ssh://git@github.com:Yuriowindiatmoko2401/airflow-dags.git
         branch: master
         maxFailures: 0
         subPath: ""
+        sshKeySecret: airflow-ssh-secret
         wait: 60
 
     
