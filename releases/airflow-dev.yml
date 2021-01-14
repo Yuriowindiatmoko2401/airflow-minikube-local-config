@@ -32,7 +32,7 @@ spec:
         enabled: false
       gitSync:
         enabled: true
-        repo: ssh://git@github.com:Yuriowindiatmoko2401/airflow-dags.git
+        repo: git@github.com:Yuriowindiatmoko2401/airflow-dags.git
         branch: master
         maxFailures: 0
         subPath: ""
